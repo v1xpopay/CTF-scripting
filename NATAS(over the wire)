@@ -1,3 +1,45 @@
 NATAS over the wire is great resource to levle up your web app hacking skills with ctf to find as passwords, I am creating this file to store passwords and solution as over te wire doesnt 
 store your findings, thank you :)
+
+username :- natas1 
+(natas2:- gotta check the source code and BOOM... you've got it) 
+Password :- 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+
+LEVEL 1-2
+  username :- natas2
+(natas3:- as given in  the NOTE you can do rightclicking so to solve you gotta use shortcut key "ctrl+U" and you got the access to source code)
+  password :- TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+
+LEVEL 2-3
+ username :- natas3
+( natas4: - bit change so as we right click you will get source code in the you get a PNG file <img src="files/pixel.png"> click that and in as-
+URL looks like-->http://natas2.natas.labs.overthewire.org/files/pixel.png we can go lil back to files and there we get some files from which one is user.txt and as
+we click that BOOM...you got the paasword) 
+password:- 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH 
+
+LEVEL 3-4
+username :- natas4
+(natas5:- we open suorce code and get nothing but <!-- No more information leaks!! Not even Google will find it this time... -->
+so we go to "robots.txt"(reserch bout it a lil) and get the leaked directory name s3cr3t as we run it in URL we can now access the password)
+password :-QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+
+
+LEVEL 4-5
+username :- natas5
+(natas6:- we intersepted the request in burp while refreshing the page and changed a parameter called Refrer from natas4 to natas5 and BOOM :) got the password)
+password:- 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+
+LEVEL 5-6
+username:- natas6
+(we again intrcept and ger the request and  in header change a parameter login=0 to =1 and we got he passwd)
+password:- 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+
+
+LEVEL 6-7
+username :-natas7
+after looking into given soucecode we got include "includes/secret.inc";
+so given folder and file name we used iin "view sourcecode" to get more details and we got the query sectrt code:-FOEIUWGHFEEUHOFUOIU and after running this query
+BOOM... we got our password
+PASSWORD:- bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+
  
