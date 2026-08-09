@@ -1,26 +1,32 @@
 <h>NATAS</h1>
 level0  username= natas0 , psswd= natas0
 
-level0 - level 1 username = natas1 , passwd = scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
+level0 - level 1 username = natas1 , passwd => scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
-level1 - level 2 (use ctrl + u ) passwd = vsDOxoXyq3wckCP1ZmTZ71ngIA60odB
+level1 - level 2 (use ctrl + u ) passwd => vsDOxoXyq3wckCP1ZmTZ71ngIA60odB
 
-level2 - level 3 pssed = K30JrSRHzjxq3paUQuwozY4MNvmNFyhI (in url add "/files" to access all files)
+level2 - level 3 pssed => K30JrSRHzjxq3paUQuwozY4MNvmNFyhI (in url add "/files" to access all files)
 
-level3 - level4 passwd = JDrPnuZAKyl6MkiqQGFIddrqpvgOASth (access /robots.txt get the new endpoint add it to url , get password file)
+level3 - level4 passwd => JDrPnuZAKyl6MkiqQGFIddrqpvgOASth (access /robots.txt get the new endpoint add it to url , get password file)
 
 level4 - level5 = use curl (command:-curl -u natas4:<password> --referer "http://natas5.natas.labs.overthewire.org/" http://natas4.natas.labs.overthewire.org/ or use proxy like burp) 
-psswd:-e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2Mof 
+psswd=> e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2Mof 
 
-level5 - level6 = (use burp or in inspect edit cookie loggedin from o to 1 ) passwd= 7mhjtShJAcld2NYbKHEadnhEwn2P8VT
+level5 - level6 = (use burp or in inspect edit cookie loggedin from o to 1 ) passwd=> 7mhjtShJAcld2NYbKHEadnhEwn2P8VT
 
 level6 - level 7 = in source code you'll get a piece of code and this is the sus line "include "includes/secret.inc";" so in URL you add http://natas6.natas.labs.overthewire.org/includes/secret.inc,
-get the query run it and get the passwoed) passwd= B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0
+get the query run it and get the passwoed) passwd=> B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0
 
-level7 - level8 = (in sourcecode you'll get hint and in that parameter add it to page='s value) passwd= ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc
+level7 - level8 = (in sourcecode you'll get hinpasswd= EgjlkzB6E8LJyf2Obt4q7q4ewt5ZWSNv
+t and in that parameter add it to page='s value) passwd=> ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc
 
 level8 -level9 = in source code you will get piece php code as instruction with secretcode need to be converted into hex so in terminal in php -a we run command :-echo base64_decode(strrev(hex2bin("sectetcode")));
-and now we have the decoded secret add it to query and get the passwd) passwd= UdxmI27dTaXmnd1rxKQTfws6jihTdcQ9
+and now we have the decoded secret add it to query and get the passwd) passwd=> UdxmI27dTaXmnd1rxKQTfws6jihTdcQ9
 
 level9 - level10 (in source you get the php code again so after studying it if you search for a; cat /etc/natas_webpass/natas10  or grep -i; cat /etc/natas_webpass/natas10 dictionary.txt commands
-in search bar you will get the result) passwd= EgjlkzB6E8LJyf2Obt4q7q4ewt5ZWSNv
+in search bar you will get the result) 
+
+level10 - level11 (in serchbar sech for .* /etc/natas_webpass/natas10 and you get passwd) passwd=> VUMQDmuITOEHzhviLE5V0VG9cPMQkyxd
+
+level11- 12 
+
