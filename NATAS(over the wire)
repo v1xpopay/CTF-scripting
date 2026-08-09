@@ -1,54 +1,26 @@
-NATAS over the wire is great resource to levle up your web app hacking skills with ctf to find as passwords, I am creating this file to store passwords and solution as over te wire doesnt 
-store your findings, thank you :)
+<h>NATAS</h1>
+level0  username= natas0 , psswd= natas0
 
-**cradentials we got**
- username:- natas0
- password :- natas0
-(you get with cradentials)
+level0 - level 1 username = natas1 , passwd = scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
-LEVEL 0-1 
-username :- natas1 
-(natas2:- gotta check the source code and BOOM... you've got it) 
-Password :- 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+level1 - level 2 (use ctrl + u ) passwd = vsDOxoXyq3wckCP1ZmTZ71ngIA60odB
 
-LEVEL 1-2
-  username :- natas2
-(natas3:- as given in  the NOTE you can do rightclicking so to solve you gotta use shortcut key "ctrl+U" and you got the access to source code)
-  password :- vsDOxoXyq3wckCP1ZmTZ71ngIA606odB 
+level2 - level 3 pssed = K30JrSRHzjxq3paUQuwozY4MNvmNFyhI (in url add "/files" to access all files)
 
-LEVEL 2-3
- username :- natas3
-( natas4: - bit change so as we right click you will get source code in the you get a PNG file <img src="files/pixel.png"> click that and in as-
-URL looks like-->http://natas2.natas.labs.overthewire.org/files/pixel.png we can go lil back to files and there we get some files from which one is user.txt and as
-we click that BOOM...you got the paasword) 
-password:- K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
+level3 - level4 passwd = JDrPnuZAKyl6MkiqQGFIddrqpvgOASth (access /robots.txt get the new endpoint add it to url , get password file)
 
-LEVEL 3-4
-username :- natas4
-(natas5:- we open suorce code and get nothing but <!-- No more information leaks!! Not even Google will find it this time... -->
-so we go to "robots.txt"(reserch bout it a lil) and get the leaked directory name s3cr3t as we run it in URL we can now access the password)
-password :-QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+level4 - level5 = use curl (command:-curl -u natas4:<password> --referer "http://natas5.natas.labs.overthewire.org/" http://natas4.natas.labs.overthewire.org/ or use proxy like burp) 
+psswd:-e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2Mof 
 
+level5 - level6 = (use burp or in inspect edit cookie loggedin from o to 1 ) passwd= 7mhjtShJAcld2NYbKHEadnhEwn2P8VT
 
-LEVEL 4-5
-username :- natas5
-(natas6:- we intersepted the request in burp while refreshing the page and changed a parameter called Refrer from natas4 to natas5 and BOOM :) got the password)
-password:- 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+level6 - level 7 = in source code you'll get a piece of code and this is the sus line "include "includes/secret.inc";" so in URL you add http://natas6.natas.labs.overthewire.org/includes/secret.inc,
+get the query run it and get the passwoed) passwd= B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0
 
-LEVEL 5-6
-username:- natas6
-(we again intrcept and ger the request and  in header change a parameter login=0 to =1 and we got he passwd)
-password:- 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+level7 - level8 = (in sourcecode you'll get hint and in that parameter add it to page='s value) passwd= ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc
 
+level8 -level9 = in source code you will get piece php code as instruction with secretcode need to be converted into hex so in terminal in php -a we run command :-echo base64_decode(strrev(hex2bin("sectetcode")));
+and now we have the decoded secret add it to query and get the passwd) passwd= UdxmI27dTaXmnd1rxKQTfws6jihTdcQ9
 
-LEVEL 6-7
-username :-natas7
-after looking into given soucecode we got include "includes/secret.inc";
-so given folder and file name we used iin "view sourcecode" to get more details and we got the query sectrt code:-FOEIUWGHFEEUHOFUOIU and after running this query
-BOOM... we got our password
-PASSWORD:- bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
-
-username :-natas8
-youll get location in comment of page source like  /etc/natas_webpass/natas8 .
-password :-  xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q 
- 
+level9 - level10 (in source you get the php code again so after studying it if you search for a; cat /etc/natas_webpass/natas10  or grep -i; cat /etc/natas_webpass/natas10 dictionary.txt commands
+in search bar you will get the result) passwd= EgjlkzB6E8LJyf2Obt4q7q4ewt5ZWSNv
